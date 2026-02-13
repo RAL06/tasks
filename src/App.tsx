@@ -12,7 +12,7 @@ function App(): React.JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Richard Lomonaco, Hello World
+                automatically reload. Richard Lomonaco, Hello World.
             </p>
             <p>Top 3 fruits of all time (undisputed)</p>
             <ol>
