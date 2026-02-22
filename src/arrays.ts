@@ -80,7 +80,10 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (!addends[0]) {return "0=0"}
+    const sum: number = addends.reduce((currentSum: number, num: number) => currentSum + num, 0);
+    const strWithPluses = addends.join("+");
+    return sum + "=" + strWithPluses;
 }
 
 /**
