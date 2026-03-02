@@ -28,6 +28,10 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
+    const foundQuestion = questions.find((questions: Question) => questions.id === id);
+    if (foundQuestion !== undefined) {
+        return foundQuestion;
+    }
     return null;
 }
 
@@ -36,7 +40,8 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const legalQuestions = questions.filter((question:Question) => question.id !== id);
+    return legalQuestions
 }
 
 /***
