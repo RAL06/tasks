@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion }from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -102,7 +103,7 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    const answers = questions.map((question: Question): Answer => {return {questionId: question.id, correct: false, submitted: false, text: ""}})
+    const answers = questions.map((question: Question): Answer => {return {questionId: question.id, correct: false, submitted: false, text: ""}});
     return answers;
 }
 
@@ -111,7 +112,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    const published = questions.map((question: Question): Question => {return {...question, published: true}})
+    const published = questions.map((question: Question): Question => {return {...question, published: true}});
     return published;
 }
 
@@ -120,7 +121,8 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const allSame = questions.every((question: Question) => question.type === questions[0].type);
+    return allSame;
 }
 
 /***
@@ -134,7 +136,7 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    return [...questions, makeBlankQuestion(id, name, type)];
 }
 
 /***
