@@ -186,6 +186,7 @@ function addNewOption (targetOptionIndex: number, question: Question, newOption:
     const newOptions = question.options.map((option: string, index: number) => (index === targetOptionIndex) ? newOption: option);
     return {...question, options: newOptions};
 }
+
 export function editOption(
     questions: Question[],
     targetId: number,

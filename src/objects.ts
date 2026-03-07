@@ -74,7 +74,7 @@ export function toMarkdown(question: Question): string {
     }
     return "# " + question.name + "\n" + question.body;
     
-}
+    }
 
 /**
  * Return a new version of the given question, except the name should now be
@@ -82,7 +82,7 @@ export function toMarkdown(question: Question): string {
  */
 export function renameQuestion(question: Question, newName: string): Question {
     return {...question, name: newName};
-}
+    }
 
 /**
  * Return a new version of the given question, except the `published` field
@@ -91,7 +91,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  */
 export function publishQuestion(question: Question): Question {
     return {...question, published: !question.published};
-}
+    }
 
 /**
  * Create a new question based on the old question, copying over its `body`, `type`,
@@ -101,7 +101,7 @@ export function publishQuestion(question: Question): Question {
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     return {...oldQuestion, name: "Copy of " + oldQuestion.name, published: false, id: id};
-}
+    }
 
 /**
  * Return a new version of the given question, with the `newOption` added to
@@ -112,7 +112,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  */
 export function addOption(question: Question, newOption: string): Question {
     return {...question, options: [...question.options, newOption]};
-}
+    }
 
 /**
  * Consumes an id, name, and two questions, and produces a new question.
@@ -130,3 +130,4 @@ export function mergeQuestion(
 ): Question {
     return {...contentQuestion, id: id, name: name, points: points, published: false};
 }
+
