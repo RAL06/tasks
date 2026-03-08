@@ -22,7 +22,7 @@ function App(): React.JSX.Element {
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
-            {/* <ChooseTeam></ChooseTeam> */}
+            <ChooseTeam></ChooseTeam>
             <hr></hr>
             {/* <ColoredBox></ColoredBox> */}
             <hr></hr>
