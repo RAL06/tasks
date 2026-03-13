@@ -29,16 +29,16 @@ function App(): React.JSX.Element {
             <hr></hr>
             <GiveAttempts></GiveAttempts>
             <hr></hr>
-            <EditMode></EditMode>
+            {/* <EditMode></EditMode> */}
             <hr></hr>
-            <ChangeColor></ChangeColor>
+            {/* <ChangeColor></ChangeColor> */}
             <hr></hr>
-            <MultipleChoiceQuestion
+            {/* <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
-            <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
