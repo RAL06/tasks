@@ -33,11 +33,11 @@ function App(): React.JSX.Element {
             <hr></hr>
             <ChangeColor></ChangeColor>
             <hr></hr>
-            {/* <MultipleChoiceQuestion
+            <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
-            <hr></hr> */}
+            <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
