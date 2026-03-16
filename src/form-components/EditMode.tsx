@@ -21,7 +21,7 @@ export function EditMode(): React.JSX.Element {
                 <Form.Control
                     value={userName}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {editing? setUserName(event.target.value) : setUserName(userName)}}
-                    disabled={!editing}/>
+                    hidden={!editing}/>
             </Form.Group>
             <Form.Check
                 type="checkbox"
@@ -29,7 +29,7 @@ export function EditMode(): React.JSX.Element {
                 label="Are you a student?"
                 checked={isStudent}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {setIsStudent(event.target.checked)}}
-                disabled={!editing}
+                hidden={!editing}
                 />
         </div>
     );
