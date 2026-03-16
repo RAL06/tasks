@@ -29,7 +29,7 @@ function App(): React.JSX.Element {
             <hr></hr>
             <GiveAttempts></GiveAttempts>
             <hr></hr>
-            {/* <EditMode></EditMode> */}
+            <EditMode></EditMode>
             <hr></hr>
             {/* <ChangeColor></ChangeColor> */}
             <hr></hr>
