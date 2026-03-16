@@ -31,7 +31,7 @@ function App(): React.JSX.Element {
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
-            {/* <ChangeColor></ChangeColor> */}
+            <ChangeColor></ChangeColor>
             <hr></hr>
             {/* <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
